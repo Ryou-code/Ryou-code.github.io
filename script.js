@@ -43,15 +43,3 @@ cat.addEventListener('click', () => {
   pose = (pose + 1) % poses.length;
   cat.querySelector('img').src = poses[pose];
 });
-const links = [...document.querySelectorAll('nav a')];
-const sections = links.map(link => document.querySelector(link.hash));
-let queued = false;
-function markSection() {
-  queued = false;
-  const visible = sections.filter(el => el.getBoundingClientRect().top <= innerHeight * .35).pop() || sections[0];
-  links.forEach(link => { if (link.hash === '#' + visible.id) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current'); });
-}
-function scheduleMark(){ if(!queued){ queued=true; requestAnimationFrame(markSection); } }
-addEventListener('scroll',scheduleMark,{passive:true});
-addEventListener('resize',scheduleMark);
-markSection();

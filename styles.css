@@ -9,4 +9,5 @@ nav a[aria-current="location"]::after{transform:scaleX(1)}
 nav a[aria-current="location"]{color:var(--ink)}
 .cat-pose{display:grid;place-items:center;margin-left:auto;padding:6px;border:0;border-radius:50%;background:transparent;width:44px;height:44px}
 .cat-pose .footer-cat{margin:0}
-.cat-pose:hover{background:var(--soft)}
+.cat-pose{cursor:pointer;touch-action:manipulation}
+header .theme-toggle{margin-left:auto}
