@@ -12,6 +12,7 @@ themeButton.addEventListener('click', () => {
   applyTheme(dark);
   try { localStorage.setItem('qz-theme', dark ? 'dark' : 'light'); } catch {}
 });
+function bindContent() {
 document.querySelector('#copy-email')?.addEventListener('click', async () => {
   const status = document.querySelector('#copy-status');
   try { await navigator.clipboard.writeText('qz2748@nyu.edu'); status.textContent = 'Email copied.'; }
@@ -30,3 +31,7 @@ if (quietSpace && matchMedia('(hover: hover) and (prefers-reduced-motion: no-pre
     quietSpace.style.setProperty('--lean', '0deg');
   });
 }
+
+}
+bindContent();
+document.addEventListener('site:content', bindContent);
