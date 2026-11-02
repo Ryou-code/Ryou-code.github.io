@@ -1,0 +1,4 @@
+.shark-water { position:relative; height:255px; min-width:0; overflow:hidden; pointer-events:none; }
+.shark-water canvas { display:block; width:100%; height:100%; font-family:ui-monospace,Consolas,monospace; opacity:.61; filter:grayscale(1); }
+html[data-theme=dark] .shark-water canvas { filter:grayscale(1) invert(1); opacity:.65; }
+@media(max-width:600px){ .home-profile:has(.shark-water){grid-template-columns:minmax(0,1fr);gap:0;padding-bottom:12px} .shark-water{height:126px} }
