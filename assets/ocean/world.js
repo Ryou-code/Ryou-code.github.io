@@ -77,7 +77,7 @@ export class World {
     seed() {
         const { width: W, height: H } = this;
         const minSide = Math.min(W, H);
-        const baseLength = clamp(minSide * 0.56, 75, 205);
+        const baseLength = clamp(minSide * 0.43, 125, 360);
         const sharkCount = this.sharkSpecs.length;
         this.sharks = [];
         for(let i = 0; i < sharkCount; i++){
